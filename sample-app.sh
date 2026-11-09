@@ -27,7 +27,7 @@ COPY ./static /home/myapp/static/
 COPY ./templates /home/myapp/templates/
 COPY sample_app.py /home/myapp/
 
-EXPOSE 8080
+EXPOSE 5050
 
 CMD ["python3", "/home/myapp/sample_app.py"]
 DOCKER
@@ -43,7 +43,7 @@ docker rm -f samplerunning 2>/dev/null || true
 echo "Starting Docker container..."
 
 docker run -d \
--p 8080:8080 \
+-p 5050:5050 \
 --name samplerunning \
 sampleapp
 
